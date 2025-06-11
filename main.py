@@ -601,8 +601,8 @@ async def txt_handler(bot: Client, m: Message):
             if "acecwply" in url:
                 cmd = f'yt-dlp -o "{name}.%(ext)s" -f "bestvideo[height<={raw_text2}]+bestaudio" --hls-prefer-ffmpeg --no-keep-video --remux-video mkv --no-warning "{url}"'
 
-            elif "https://cpvod.testbook.com/" in url:
-                url = url.replace("https://cpvod.testbook.com/","https://media-cdn.classplusapp.com/drm/")
+            elif "https://media-cdn.classplusapp.com/" in url:
+                url = url.replace("https://media-cdn.classplusapp.com/","https://media-cdn.classplusapp.com/alisg-cdn-a.classplusapp.com/")
                 url = 'https://dragoapi.vercel.app/classplus?link=' + url
                 mpd, keys = helper.get_mps_and_keys(url)
                 url = mpd
